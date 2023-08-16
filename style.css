@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@font-face {
+  font-family: Indian;
+  src: url(./assets/Indian.TTF);
+  user-select: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./assets/bg.jpg) no-repeat fixed center;
+  background-size: cover;
+}
+.main {
+  height: 90vh;
+  width: 90vw;
+  position: relative;
+  border-radius: 4rem;
+  overflow: hidden;
+  background: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 15px 31px 84px 18px rgba(0, 0, 0, 0.7);
+}
+.main::before {
+  content: "";
+  position: absolute;
+  height: 150vw;
+  width: 40%;
+  background: linear-gradient(to bottom, #e28931 50%, #349058 50%);
+  filter: blur(0.5rem);
+  animation: rotate 4s linear infinite;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  background: #ffff;
+  inset: 0.6rem;
+  border-radius: inherit;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #003800;
+  height: 50%;
+}
+.box h1 {
+  position: absolute;
+  top: 10%;
+  z-index: 1;
+  font-family: "Indian", monospace;
+  font-size: 3rem;
+}
+.box h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #ff9933;
+}
+.box h1:nth-child(2) {
+  color: #138808;
+  animation: animate 3s ease-in-out infinite;
+}
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 26%,
+      6% 35%,
+      16% 53%,
+      26% 66%,
+      42% 71%,
+      52% 64%,
+      56% 52%,
+      60% 40%,
+      65% 27%,
+      76% 24%,
+      85% 28%,
+      90% 40%,
+      92% 51%,
+      95% 64%,
+      97% 76%,
+      100% 100%,
+      0 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      2% 73%,
+      7% 61%,
+      14% 54%,
+      20% 50%,
+      30% 49%,
+      39% 51%,
+      48% 50%,
+      58% 44%,
+      66% 37%,
+      76% 30%,
+      89% 19%,
+      100% 12%,
+      100% 45%,
+      100% 60%,
+      100% 75%,
+      100% 100%,
+      0 100%
+    );
+  }
+}
+
+.flag {
+  z-index: 1;
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.saffron {
+  width: 24rem;
+  height: 4rem;
+  background-color: #ff9933;
+}
+.white {
+  width: 24rem;
+  height: 4rem;
+  background-color: #ffffff;
+}
+.green {
+  width: 24rem;
+  height: 4rem;
+  background-color: #128807;
+}
+.chakra {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid #000080;
+  border-radius: 50%;
+  animation: rotate 10s linear infinite;
+}
+.spoke {
+  position: absolute;
+  display: inline-block;
+  height: 3rem;
+  width: 0.09rem;
+  background: #000080;
+  left: 50%;
+}
+.spoke:nth-child(1) {
+  transform: rotate(15deg);
+}
+.spoke:nth-child(2) {
+  transform: rotate(30deg);
+}
+.spoke:nth-child(3) {
+  transform: rotate(45deg);
+}
+.spoke:nth-child(4) {
+  transform: rotate(60deg);
+}
+.spoke:nth-child(5) {
+  transform: rotate(75deg);
+}
+.spoke:nth-child(6) {
+  transform: rotate(90deg);
+}
+.spoke:nth-child(7) {
+  transform: rotate(105deg);
+}
+.spoke:nth-child(8) {
+  transform: rotate(120deg);
+}
+.spoke:nth-child(9) {
+  transform: rotate(135deg);
+}
+.spoke:nth-child(10) {
+  transform: rotate(150deg);
+}
+.spoke:nth-child(11) {
+  transform: rotate(165deg);
+}
+
+.confetti {
+  z-index: 1;
+}
+.confetti button {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(60deg, #ff9933, #128807) border-box;
+  color: #313149;
+  padding: 1rem 2rem;
+  border: 4px solid transparent;
+  border-radius: 40px;
+  display: inline-block;
+  font-size: 28px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.confetti button:hover,
+.confetti button:active {
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(-60deg, #ff9933, #128807) border-box;
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.myAudio {
+  display: none;
+}
+footer {
+  position: relative;
+  top: 10vw;
+  font-family: "Poppins", sans-serif;
+  z-index: 1;
+}
